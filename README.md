@@ -10,12 +10,8 @@ A deep learning-based web application that detects crop leaf diseases from image
 
 ---
 
-## 📸 Application Preview
 
-> Replace the image below with your own application screenshot.
 
-![![alt text](image.png)]
----
 
 ## ✨ Features
 
