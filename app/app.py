@@ -41,18 +41,7 @@ uploaded_file = st.file_uploader(
     type=["jpg", "jpeg", "png"]
 )
 
-if uploaded_file is not None:
-    image = Image.open(uploaded_file)
 
-    st.image(
-        image,
-        caption="Uploaded Leaf Image",
-        use_container_width=True
-    )
-    image = image.resize((150, 150))
-    image_array = img_to_array(image)
-    image_array = np.expand_dims(image_array, axis=0)
-    image_array = image_array / 255.0
     
 class_names = [
     "Apple___Apple_scab",
@@ -159,7 +148,7 @@ if uploaded_file is not None:
     image_array = img_to_array(image)
     image_array = np.expand_dims(image_array, axis=0)
     image_array = image_array / 255.0
-    
+
     prediction = model.predict(image_array)
 
     predicted_class = class_names[np.argmax(prediction)]
