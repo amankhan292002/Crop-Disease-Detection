@@ -7,18 +7,18 @@ from tensorflow.keras.preprocessing.image import img_to_array
 
 st.set_page_config(
     page_title="Crop Disease Detection",
-    page_icon="🌿",
+    page_icon="",
     layout="centered"
 )
 
-st.title("🌿 Crop Disease Detection")
+st.title(" Crop Disease Detection")
 
 st.write(
     "Upload a crop leaf image to identify the disease using a trained Deep Learning model."
 )
 
 st.info("""
-📌 This application is trained to identify only the following 8 classes:
+ This application is trained to identify only the following 8 classes:
 
 • Apple Scab
 • Healthy Apple
@@ -29,7 +29,7 @@ st.info("""
 • Tomato Early Blight
 • Healthy Tomato
 
-⚠️ Images of crops or diseases outside these classes may produce incorrect predictions.
+ Images of crops or diseases outside these classes may produce incorrect predictions.
 """)
 
 st.write("Upload a leaf image to detect the disease.")
@@ -54,14 +54,14 @@ class_names = [
     "Tomato___healthy"
 ]
 disease_info = {
-    "Apple___Apple_scab": "🍎 Apple Scab",
-    "Apple___healthy": "🍎 Healthy Apple Leaf",
-    "Corn_(maize)___Northern_Leaf_Blight": "🌽 Corn Northern Leaf Blight",
-    "Corn_(maize)___healthy": "🌽 Healthy Corn Leaf",
-    "Potato___Late_blight": "🥔 Potato Late Blight",
-    "Potato___healthy": "🥔 Healthy Potato Leaf",
-    "Tomato___Early_blight": "🍅 Tomato Early Blight",
-    "Tomato___healthy": "🍅 Healthy Tomato Leaf"
+    "Apple___Apple_scab": " Apple Scab",
+    "Apple___healthy": " Healthy Apple Leaf",
+    "Corn_(maize)___Northern_Leaf_Blight": " Corn Northern Leaf Blight",
+    "Corn_(maize)___healthy": " Healthy Corn Leaf",
+    "Potato___Late_blight": " Potato Late Blight",
+    "Potato___healthy": " Healthy Potato Leaf",
+    "Tomato___Early_blight": " Tomato Early Blight",
+    "Tomato___healthy": " Healthy Tomato Leaf"
 }
 disease_details = {
     "Apple___Apple_scab": {
@@ -160,11 +160,11 @@ if uploaded_file is not None:
     st.write(f"Confidence: {confidence:.2f}%")
     st.progress(float(confidence) / 100)
 
-    st.subheader("📖 Disease Description")
+    st.subheader(" Disease Description")
 
     st.write(disease_details[predicted_class]["description"])
 
-    st.subheader("💊 Recommended Treatment")
+    st.subheader(" Recommended Treatment")
 
     for tip in disease_details[predicted_class]["treatment"]:
-        st.write(f"✅ {tip}")
+        st.write(f" {tip}")
