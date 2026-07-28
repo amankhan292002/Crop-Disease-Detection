@@ -147,22 +147,35 @@ disease_details = {
     }
 }
 
-prediction = model.predict(image_array)
+if uploaded_file is not None:
+    image = Image.open(uploaded_file)
 
-predicted_class = class_names[np.argmax(prediction)]
+    st.image(
+        image,
+        caption="Uploaded Leaf Image",
+        use_container_width=True
+    )
+    image = image.resize((150, 150))
+    image_array = img_to_array(image)
+    image_array = np.expand_dims(image_array, axis=0)
+    image_array = image_array / 255.0
+    
+    prediction = model.predict(image_array)
 
-confidence = np.max(prediction) * 100
+    predicted_class = class_names[np.argmax(prediction)]
 
-st.success(f"Prediction: {disease_info[predicted_class]}")
+    confidence = np.max(prediction) * 100
 
-st.write(f"Confidence: {confidence:.2f}%")
-st.progress(float(confidence) / 100)
+    st.success(f"Prediction: {disease_info[predicted_class]}")
 
-st.subheader("📖 Disease Description")
+    st.write(f"Confidence: {confidence:.2f}%")
+    st.progress(float(confidence) / 100)
 
-st.write(disease_details[predicted_class]["description"])
+    st.subheader("📖 Disease Description")
 
-st.subheader("💊 Recommended Treatment")
+    st.write(disease_details[predicted_class]["description"])
 
-for tip in disease_details[predicted_class]["treatment"]:
-    st.write(f"✅ {tip}")
+    st.subheader("💊 Recommended Treatment")
+
+    for tip in disease_details[predicted_class]["treatment"]:
+        st.write(f"✅ {tip}")
