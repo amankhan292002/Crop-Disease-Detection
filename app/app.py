@@ -13,6 +13,25 @@ st.set_page_config(
 
 st.title("🌿 Crop Disease Detection")
 
+st.write(
+    "Upload a crop leaf image to identify the disease using a trained Deep Learning model."
+)
+
+st.info("""
+📌 This application is trained to identify only the following 8 classes:
+
+• Apple Scab
+• Healthy Apple
+• Corn Northern Leaf Blight
+• Healthy Corn
+• Potato Late Blight
+• Healthy Potato
+• Tomato Early Blight
+• Healthy Tomato
+
+⚠️ Images of crops or diseases outside these classes may produce incorrect predictions.
+""")
+
 st.write("Upload a leaf image to detect the disease.")
 
 model = load_model("model/best_crop_model.keras")
@@ -31,12 +50,10 @@ if uploaded_file is not None:
         use_container_width=True
     )
     image = image.resize((150, 150))
-
-image_array = img_to_array(image)
-
-image_array = np.expand_dims(image_array, axis=0)
-
-image_array = image_array / 255.0
+    image_array = img_to_array(image)
+    image_array = np.expand_dims(image_array, axis=0)
+    image_array = image_array / 255.0
+    
 class_names = [
     "Apple___Apple_scab",
     "Apple___healthy",
