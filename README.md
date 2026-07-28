@@ -1,39 +1,67 @@
-# 🌱 Crop Disease Detection using Deep Learning
+# 🌿 Crop Disease Detection using Deep Learning
 
-## About the Project
-
-This is a Deep Learning project that I built to detect diseases in crop leaf images.
-
-The user can upload a leaf image, and the model predicts the disease. The application also shows the confidence score, a short description of the disease, and some basic treatment suggestions.
-
-I built this project using TensorFlow, Python, and Streamlit as part of my learning in Deep Learning and Computer Vision.
+A deep learning-based web application that detects crop leaf diseases from images using TensorFlow and Keras. Users can upload a leaf image, and the application predicts the disease along with the confidence score, disease description, and recommended treatment.
 
 ---
 
-## Features
+## 🚀 Live Demo
 
-- Upload a crop leaf image
-- Predict the disease using a trained Deep Learning model
-- Show prediction confidence
-- Display disease description
-- Suggest basic treatment
-- Simple and easy-to-use interface
+🔗 https://crop-disease-detection-aman.streamlit.app/
 
 ---
 
-## Technologies Used
+## 📸 Application Preview
+
+> Replace the image below with your own application screenshot.
+
+![Application Screenshot](![alt text](image.png))
+
+---
+
+## ✨ Features
+
+- Upload crop leaf images
+- Detect crop diseases using a Deep Learning model
+- Display prediction confidence
+- Show disease description
+- Recommend treatment suggestions
+- Clean and interactive Streamlit interface
+- Supports 8 crop disease/healthy classes
+
+---
+
+## 🌱 Supported Classes
+
+| Crop | Class |
+|------|------|
+| 🍎 Apple | Apple Scab |
+| 🍎 Apple | Healthy Apple |
+| 🌽 Corn | Northern Leaf Blight |
+| 🌽 Corn | Healthy Corn |
+| 🥔 Potato | Late Blight |
+| 🥔 Potato | Healthy Potato |
+| 🍅 Tomato | Early Blight |
+| 🍅 Tomato | Healthy Tomato |
+
+---
+
+## 🛠️ Tech Stack
 
 - Python
-- TensorFlow / Keras
-- Streamlit
+- TensorFlow
+- Keras
 - NumPy
 - Pillow
+- Streamlit
+- Google Colab
+- Git
+- GitHub
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
-```
+```text
 Crop-Disease-Detection/
 │
 ├── app/
@@ -43,7 +71,10 @@ Crop-Disease-Detection/
 │   └── best_crop_model.keras
 │
 ├── notebook/
-│   └── 01_Crop_Disease_Detection.ipynb
+│   └── Crop_Disease_Detection.ipynb
+│
+├── images/
+│   └── app_demo.png
 │
 ├── requirements.txt
 ├── .gitignore
@@ -52,15 +83,21 @@ Crop-Disease-Detection/
 
 ---
 
-## How to Run
+## ⚙️ Installation
 
-Clone the repository
+### Clone the repository
 
 ```bash
-git clone <repository-link>
+git clone https://github.com/amankhan292002/Crop-Disease-Detection.git
 ```
 
-Install the required libraries
+Move into the project directory
+
+```bash
+cd Crop-Disease-Detection
+```
+
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -74,28 +111,66 @@ streamlit run app/app.py
 
 ---
 
-## Supported Classes
+## 📊 Model Information
 
-- Apple Scab
-- Healthy Apple
-- Corn Northern Leaf Blight
-- Healthy Corn
-- Potato Late Blight
-- Healthy Potato
-- Tomato Early Blight
-- Healthy Tomato
+- Framework: TensorFlow / Keras
+- Task: Image Classification
+- Input Image Size: **150 × 150**
+- Output: Disease Class + Confidence Score
+
+The model predicts the most probable disease class among the supported categories and displays the prediction confidence.
 
 ---
 
-## Future Improvements
+## 💡 How It Works
 
-- Add more crop diseases
-- Improve the user interface
-- Deploy the project online
-- Add more disease information
+1. Upload a crop leaf image.
+2. The image is resized and preprocessed.
+3. The trained deep learning model performs prediction.
+4. The application displays:
+   - Predicted disease
+   - Confidence score
+   - Disease description
+   - Recommended treatment
 
 ---
 
-## Author
+## 📌 Current Limitations
+
+- The application supports only the eight trained classes.
+- Images from unsupported crops or diseases may produce incorrect predictions.
+- Prediction confidence depends on image quality, lighting conditions, viewing angle, and disease severity.
+
+---
+
+## 🔮 Future Improvements
+
+- Support more crop species
+- Add more plant diseases
+- Disease severity estimation
+- Multilingual support
+- Mobile-friendly interface
+- Better confidence calibration
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome.
+
+If you would like to improve this project, feel free to fork the repository, make your changes, and submit a pull request.
+
+---
+
+## 👨‍💻 Author
 
 **Aman Khan**
+
+GitHub:
+https://github.com/amankhan292002
+
+---
+
+## ⭐ If you like this project
+
+If you found this project useful, please consider giving it a ⭐ on GitHub.
