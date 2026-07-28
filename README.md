@@ -1,19 +1,19 @@
-# 🌿 Crop Disease Detection using Deep Learning
+# Crop Disease Detection using Deep Learning
 
 A deep learning-based web application that detects crop leaf diseases from images using TensorFlow and Keras. Users can upload a leaf image, and the application predicts the disease along with the confidence score, disease description, and recommended treatment.
 
 ---
 
-## 🚀 Live Demo
+## Live Demo
 
-🔗 https://crop-disease-detection-aman.streamlit.app/
+ https://crop-disease-detection-aman.streamlit.app/
 
 ---
 
 
 
 
-## ✨ Features
+## Features
 
 - Upload crop leaf images
 - Detect crop diseases using a Deep Learning model
@@ -25,22 +25,22 @@ A deep learning-based web application that detects crop leaf diseases from image
 
 ---
 
-## 🌱 Supported Classes
+##  Supported Classes
 
 | Crop | Class |
 |------|------|
-| 🍎 Apple | Apple Scab |
-| 🍎 Apple | Healthy Apple |
-| 🌽 Corn | Northern Leaf Blight |
-| 🌽 Corn | Healthy Corn |
-| 🥔 Potato | Late Blight |
-| 🥔 Potato | Healthy Potato |
-| 🍅 Tomato | Early Blight |
-| 🍅 Tomato | Healthy Tomato |
+|  Apple | Apple Scab |
+|  Apple | Healthy Apple |
+|  Corn | Northern Leaf Blight |
+|  Corn | Healthy Corn |
+|  Potato | Late Blight |
+|  Potato | Healthy Potato |
+|  Tomato | Early Blight |
+|  Tomato | Healthy Tomato |
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - Python
 - TensorFlow
@@ -54,7 +54,7 @@ A deep learning-based web application that detects crop leaf diseases from image
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 Crop-Disease-Detection/
@@ -106,7 +106,7 @@ streamlit run app/app.py
 
 ---
 
-## 📊 Model Information
+## Model Information
 
 - Framework: TensorFlow / Keras
 - Task: Image Classification
@@ -117,7 +117,7 @@ The model predicts the most probable disease class among the supported categorie
 
 ---
 
-## 💡 How It Works
+## How It Works
 
 1. Upload a crop leaf image.
 2. The image is resized and preprocessed.
@@ -130,7 +130,7 @@ The model predicts the most probable disease class among the supported categorie
 
 ---
 
-## 📌 Current Limitations
+## Current Limitations
 
 - The application supports only the eight trained classes.
 - Images from unsupported crops or diseases may produce incorrect predictions.
@@ -138,7 +138,7 @@ The model predicts the most probable disease class among the supported categorie
 
 ---
 
-## 🔮 Future Improvements
+## Future Improvements
 
 - Support more crop species
 - Add more plant diseases
@@ -149,7 +149,7 @@ The model predicts the most probable disease class among the supported categorie
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome.
 
@@ -157,7 +157,7 @@ If you would like to improve this project, feel free to fork the repository, mak
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Aman Khan**
 
@@ -165,7 +165,3 @@ GitHub:
 https://github.com/amankhan292002
 
 ---
-
-## ⭐ If you like this project
-
-If you found this project useful, please consider giving it a ⭐ on GitHub.
