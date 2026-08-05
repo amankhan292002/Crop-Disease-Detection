@@ -110,7 +110,7 @@ streamlit run app/app.py
 
 - Framework: TensorFlow / Keras
 - Task: Image Classification
-- Input Image Size: **150 × 150**
+- Input Image Size: **150 × 150** * 3
 - Output: Disease Class + Confidence Score
 
 The model predicts the most probable disease class among the supported categories and displays the prediction confidence.
