@@ -118,7 +118,7 @@ The model predicts the most probable disease class among the supported categorie
 ---
 
 ## How It Works
-1.Pick a crop leaf and Resize the image to 150*150*3
+ 1.Pick a crop leaf and Resize the image to **150 * 150** * 3
 
 2. Upload a crop leaf image.
  
