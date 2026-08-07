@@ -110,7 +110,7 @@ streamlit run app/app.py
 
 - Framework: TensorFlow / Keras
 - Task: Image Classification
-- Input Image Size: **150 × 150** * 3
+- Input Image Size: **150 * 150** * 3
 - Output: Disease Class + Confidence Score
 
 The model predicts the most probable disease class among the supported categories and displays the prediction confidence.
@@ -118,11 +118,11 @@ The model predicts the most probable disease class among the supported categorie
 ---
 
 ## How It Works
-
-1. Upload a crop leaf image.
-2. The image is resized and preprocessed.
-3. The trained deep learning model performs prediction.
-4. The application displays:
+1.Pick a crop leaf and Resize the image to 150*150*3
+2. Upload a crop leaf image.
+3. The image is resized and preprocessed.
+4. The trained deep learning model performs prediction.
+5. The application displays:
    - Predicted disease
    - Confidence score
    - Disease description
