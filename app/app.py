@@ -30,6 +30,8 @@ st.info("""
 • Healthy Tomato
 
  Images of crops or diseases outside these classes may produce incorrect predictions.
+
+ Make sure image is resized to 150 * 150 * 3
 """)
 
 st.write("Upload a leaf image to detect the disease.")
